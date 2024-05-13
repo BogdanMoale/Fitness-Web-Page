@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Fitness Center</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- bootstrap link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+<h1>Welcome to Titan Fitness</h1>
+
+<video autoplay muted loop id="bg-video">
+  <source src="video/bg_video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<a href="#about"><button class="btn">Get Started</button></a>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section start  -->
+
+<section class="about" id="about">
+
+<div class="row">
+
+    <div class="image">
+        <img src="images/about.jpg" alt="">
+    </div>
+
+    <div class="content">
+        <h3>About Us</h3>
+        <p>Titanic Fitness Center is your destination for fitness excellence. Our modern facility offers top-notch equipment and expert trainers to support your fitness goals. Join our vibrant community today and set sail towards a stronger, healthier you,</p>
+        <p>Whether you're a seasoned athlete or just starting out on your fitness voyage, our team of certified trainers is here to guide and support you every step of the way. From personalized workout plans to group fitness classes, our expert instructors are committed to helping you achieve your goals and surpass your limits.</p>
+        <a href="#service"><button class="btn">Learn More</button></a>
+    </div>
+
+</div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- service section starts  -->
+
+<section class="service" id="service">
+
+<h1 class="heading">What can you experience if you join us</h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="images/img1.jpg" alt="">
+        <div class="info">
+            <h3>Treadmill</h3>
+            <p>A popular indoor exercise machine designed for walking, jogging, or running. It typically consists of a moving belt propelled by the user's steps, set on a motorized platform.</p>
+            <a href="#register"><button class="btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/img2.jpg" alt="">
+        <div class="info">
+            <h3>Yoga</h3>
+            <p>A holistic practice originating from ancient India that combines physical postures, breathing exercises, meditation, and ethical principles.</p>
+            <a href="#register"><button class="btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/img3.jpg" alt="">
+        <div class="info">
+            <h3>Trainer</h3>
+            <p>A professional who provides guidance, instruction, and motivation to individuals or groups pursuing fitness goals.</p>
+            <a href="#register"><button class="btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/img4.jpg" alt="">
+        <div class="info">
+            <h3>Equipments</h3>
+            <p>Wide array of exercise machines, tools, and accessories designed to facilitate various forms of physical activity and strength training.</p>
+            <a href="#register"><button class="btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="box" >
+        <img src="images/img5.jpg" alt="">
+        <div class="info">
+            <h3>Boxing</h3>
+            <p>A combat sport that involves two opponents engaging in a contest of strength, speed, and strategy within a roped-off square ring.</p>
+            <a href="#register"><button class="btn">More</button></a>
+        </div>
+    </div>
+
+    <div class="box">
+        <img src="images/img6.jpg" alt="">
+        <div class="info">
+            <h3>Weight Lifting</h3>
+            <p>A form of exercise that involves lifting weights to build muscle strength, endurance, and overall fitness.</p>
+            <a href="#register"><button class="btn">More</button></a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- service section ends -->
+
+<!-- register section starts  -->
+
+<section class="register" id="register">
+
+<h1 class="heading">Start your journey</h1>
+
+<div class="container">
+    <form id="registration-form" class="register-form" onchange="validateForm(1)" oninput="validateForm(1)">
+        <div id="section1">
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Enter email" required onchange="validateForm(1)" oninput="validateForm(1)">
+            </div>
+            <div class="form-group">
+                <input type="number" id="age" placeholder="Enter your age" required onchange="validateForm(1)" oninput="validateForm(1)">
+            </div>
+            <div class="form-group">
+                <select id="gender" required onchange="validateForm(1)">
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="number" step="0.1" id="height" placeholder="Height(cm)" required onchange="validateForm(1)" oninput="validateForm(1)">
+              </div>
+              <div class="form-group">
+                <input type="number" step="0.1" id="weight" placeholder="Weight (kg)" required onchange="validateForm(1)" oninput="validateForm(1)">
+              </div>
+              <button type="button" id="nextButton" class="btn" onclick="nextSection(2)" disabled>Next</button>
+        </div>
+
+        
+
+        <div id="section2" style="display: none;">
+            <!-- Second section fields -->
+            <div class="form-group" >
+                <select id="training-days">
+                    <option value="" disabled selected>Training days per week</option>
+                    <option value="1">1 day</option>
+                    <option value="2">2 days</option>
+                    <option value="3">3 days</option>
+                    <option value="4">4 days</option>
+                    <option value="5">5 days</option>
+                    <option value="6">6 days</option>
+                    <option value="7">7 days</option>
+                    
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+              <div class="form-group" >
+                <select id="training-times">
+                    <option value="" disabled selected>Hours of training per day</option>
+                    <option value="1">1 hour</option>
+                    <option value="2">2 hours</option>
+                    <option value="3">3 hours</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+                  <div class="form-group" >
+                    <select id="experience">
+                        <option value="" disabled selected>Experience level</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+          
+                  <div class="form-group" >
+                    <select id="health-conditions">
+                        <option value="" disabled selected>Health problems</option>
+                        <option value="none">None</option>
+                        <option value="hypertension">Hypertension</option>
+                        <option value="diabetes">Diabetes</option>
+                        <option value="asthma">Asthma</option>
+                        <option value="other">Other</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            <button type="button" class="btn" onclick="previousSection(1)">Previous</button>
+            <button type="button" id="nextButton" class="btn" onclick="nextSection(3)">Next</button>
+        </div>
+
+        <!-- Add more sections as needed -->
+        
+        <div id="section3" style="display: none;">
+            <!-- Third section fields -->
+            <div class="form-group">
+                <label for="objectives">Fitness Objectives:</label><br>
+                <div class="checkboxes">
+                    <input type="checkbox" id="weight-loss" name="objectives" value="weight-loss">
+                    <label for="weight-loss">Weight loss</label><br>
+                    
+                    <input type="checkbox" id="muscle-gain" name="objectives" value="muscle-gain">
+                    <label for="muscle-gain">Muscle growth</label><br>
+                    
+                    <input type="checkbox" id="toning" name="objectives" value="toning">
+                    <label for="toning">Muscle toning and definition</label><br>
+                    
+                    <input type="checkbox" id="cardio-health" name="objectives" value="cardio-health">
+                    <label for="cardio-health">Improving cardiovascular health</label>
+                </div>
+            </div>
+    
+            <div class="form-group">
+              <select id="desired-results-time">
+                  <option value="" disabled selected>Select desired period</option>
+                  <option value="1-month">1 month</option>
+                  <option value="3-months">3 months</option>
+                  <option value="6-months">6 months</option>
+                  <option value="1-year">1 year</option>
+                  <option value="2-years">2 year</option>
+                  <option value="3-years">3 year</option>
+                  <!-- Add more options as needed -->
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills to improve or acquire:</label><br>
+            <div class="checkboxes">
+                <input type="checkbox" id="skill1" name="skills" value="Skill 1">
+                <label for="skill1">Skill 1</label><br>
+                
+                <input type="checkbox" id="skill2" name="skills" value="Skill 2">
+                <label for="skill2">Skill 2</label><br>
+                
+                <input type="checkbox" id="skill3" name="skills" value="Skill 3">
+                <label for="skill3">Skill 3</label><br>
+                
+                <!-- Add more checkboxes as needed -->
+            </div>
+        </div>
+        <button type="button" class="btn" onclick="previousSection(2)">Previous</button>
+        <button type="submit" class="btn">Submit</button>
+    </div>
+    
+</form>
+
+
+<!-- register section ends -->
+
+
+
+</body>
+</html>
