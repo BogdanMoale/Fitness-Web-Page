@@ -1,5 +1,7 @@
 # Titan Fitness Center
 
+https://bogdanmoale.github.io/Fitness-Web-Page/
+
 Titan Fitness Center is a modern fitness facility aimed at providing an exceptional fitness experience for individuals of all levels. This project encompasses a fully responsive website designed to showcase the offerings and services of Titan Fitness Center.
 
 ## Features
